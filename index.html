@@ -29,28 +29,34 @@
 }
 
 html {
-    background-color:#dddddd;
+    background-color:#eef0f2;
+    padding:10px;
 }
 
 body {
     font-family: "Fira Sans", sans-serif;
     max-width:1200px;
-    margin:10px auto 10px auto;
-    border:1px solid #333333;
+    margin:0px auto 0px auto;
     background-color:white;
     font-variant-numeric: oldstyle-nums;
     font-kerning: auto;
     font-variant-ligatures: common-ligatures;
-    box-shadow: 0px 0px 12px 3px #bbbbbb;
+    box-shadow: 0px 0px 15px 4px #b0b0b0;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 div.body {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 12px;
 }
 
-table {
+table.addr {
     padding-top:5px;
+    font-variant-numeric: proportional-nums lining-nums !important;
 }
 
 th {
@@ -69,26 +75,18 @@ address {
 }
 
 h1 {
-    font-weight:600;
     margin-bottom:0px;
     padding-bottom:0px;
 }
 
-h2 {
+h1, h2, h3, h4 {
+    color:hsl(347, 85%, 33%);
     font-weight:600;
-}
-
-h3, h4 {
-    font-weight:600;
-}
-
-h1,h2,h3,h4 {
-    color:#8b0e1c;
 }
 
 a {
     text-decoration: none;
-    color:#8b0e1c;
+    color:hsl(347, 85%, 33%);
 }
 
 .sc {
@@ -102,7 +100,7 @@ b {
 .cell {
     display:table-cell;
     padding:15px;
-    background-color:#8b0e1c;
+    background-color:hsl(347, 85%, 33%);
     font-weight:550;
     text-align:center;
     color:white;
@@ -110,7 +108,7 @@ b {
 }
 
 .cell:hover {
-    background-color:hsl(353, 85%, 35%);
+    background-color:hsl(347, 80%, 37%);
     cursor:pointer;
 }
 
@@ -120,17 +118,13 @@ b {
     table-layout:fixed;
 }
 
+ol, ul {
+    padding-left:2em;
+}
+
 li::marker {
     font-variant-numeric: oldstyle-nums tabular-nums;
     font-weight:550;
-}
-
-.addr, address {
-    font-variant-numeric: lining-nums;
-}
-
-span.journal {
-    font-variant-numeric:lining-nums tabular-nums;
 }
 
 span.dutch {
@@ -141,6 +135,44 @@ th {
     font-weight:550;
 }
 
+div.pic {
+    width: 3555px;
+    flex-shrink: 1.35;
+    margin-left: 20px;
+    min-width: 350px;
+    margin-top: 21.44px;
+    background-image: url("me.png");
+    background-size: cover;
+    background-position-x: 42%;
+}
+
+p.intro {
+    text-align: justify;
+    hyphens: auto;
+}
+
+div.top-container {
+    display: flex;
+    align-items: stretch;
+}
+
+@media screen and (max-width: 750px) {
+    div.top-container {
+        flex-direction: column-reverse;
+    }
+
+    div.pic {
+        width:100%;
+        flex:none;
+        aspect-ratio: 16/10;
+        margin-left:0px;
+        margin-right:10px;
+    }
+
+    p.intro {
+        text-align:left;
+    }
+}
 </style>
 </head>
 <body>
@@ -152,137 +184,138 @@ th {
     </div>
 </div>
 <div class="body">
-<div style="display:flex">
     <div>
-    <h1> Tobias Lenz </h1>
-    <table>
-        <tr>
-            <th scope="row">Address</th>
-            <td><address>
-                Mathematical Institute, University of Utrecht<br/>
-                Budapestlaan 6<br/>
-                3584 CD Utrecht<br/>
-                The Netherlands <br/>
-            </address></td>
-        </tr>
-        <tr>
-            <th scope="row">Office</th>
-            <td class="addr">411</td>
-        </tr>
-        <tr>
-            <th scope="row">E-mail</th>
-            <td>t.lenz (at) uu (dot) nl</td>
-        <tr>
-    </table>
+        <div class="top-container">
+            <div>
+                <div>
+                <h1> Tobias Lenz </h1>
+                <table class="addr">
+                    <tr>
+                        <th scope="row">Address</th>
+                        <td><address>
+                            Mathematical Institute, University of Utrecht<br/>
+                            Budapestlaan 6<br/>
+                            3584&hairsp;CD Utrecht<br/>
+                            The Netherlands <br/>
+                        </address></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Office</th>
+                        <td class="addr">411</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">E-mail</th>
+                        <td>t.lenz (at) uu (dot) nl</td>
+                    <tr>
+                </table>
+                </div>
+
+                <p class="intro" style="margin-bottom:0px;">I&rsquo;m a postdoc (<span class="dutch">onderzoeker</span>) in the <a href="https://utrechtgeometrycentre.nl/our-algebraic-topology-group/">algebraic topology group</a>
+                at the University of Utrecht, where my mentor is <a href="https://www.uu.nl/staff/IMoerdijk">Ieke Moerdijk</a>. Before that I was a postdoc
+                at the University of Bonn, where I also obtained my PhD  under the supervision of
+                <a href="https://www.math.uni-bonn.de/people/schwede">Stefan Schwede</a> in 2021.
+                </p>
+            </div>
+            <div class="pic"></div>
     </div>
-    <div style="flex:1;background-image:url(photo.jpg);background-position:top right;background-repeat:no-repeat;background-size:auto 100%;margin-top:21.44px;">
+    <p class="intro" style="margin-top:12px;">My research concerns equivariant and global homotopy theory, with a particular
+    focus on equivariant infinite loop space theory and surrounding topics like
+    (global) equivariant algebraic <i>K</i>-theory and parameterized semiadditivity.
+    You can find an overview about some of the work I did before 2021 in
+    <a href="https://sites.google.com/view/jmra/videos/topologygeometry#h.mzf0x3rdij8m">this video</a>
+    I contributed to the <a href="https://sites.google.com/view/jmra/home"> Junior Mathematician Research Archive</a>.
+    </p>
+
+    <h2 id="publications"> Publications and preprints </h2>
+    <ol reversed="reversed">
+        <li><p>
+            <b> Global Model Categories and Topological Andr&eacute;-Quillen Cohomology.</b><br/>
+            joint with <a class="sc" href="https://www.math.uni-bonn.de/people/stahlhau">Michael Stahlhauer</a><br/>
+            <span class="journal">preprint, 71 pages</span><br/>
+            <a href="https://arxiv.org/abs/2302.06207">arXiv:2302.06207</a>
+        </p></li>
+        <li><p>
+            <b>Parameterized Stability and the Universal Property of Global Spectra.</b><br/>
+            joint with <a class="sc" href="https://sites.google.com/view/bastiaan-cnossen">Bastiaan Cnossen</a> and <a class="sc" href="https://www.math.uni-bonn.de/people/linskens/webpage.htmpl">Sil Linskens</a><br/>
+            <span class="journal">preprint, 103 pages</span><br/>
+            <a href="https://arxiv.org/abs/2301.08240">arXiv:2301.08240</a>
+        </p></li>
+
+        <li><p>
+            <b>Genuine vs. Na&iuml;ve Symmetric Monoidal <i>G</i>-Categories.</b><br/>
+            <span class="journal">preprint, 56 pages</span><br/>
+            <a href="https://arxiv.org/abs/2203.02277">arXiv:2203.02277</a>
+        </p></li>
+
+        <li><p>
+            <b>Global Algebraic <i>K</i>-Theory is Swan <i>K</i>-Theory.</b><br/>
+            <span class="journal">preprint, 53 pages</span><br/>
+            <a href="https://arxiv.org/abs/2202.07272">arXiv:2202.07272</a>
+        </p></li>
+
+        <li><p>
+            <b> Categorical Models of Unstable <i>G</i>-Global Homotopy Theory.</b><br/>
+            <span class="journal">preprint, 27 pages</span><br/>
+            <a href="https://arxiv.org/abs/2109.02067">arXiv:2109.02067</a>
+        </p></li>
+
+        <li><p>
+            <b> <i>G</i>-Global Homotopy Theory and Algebraic <i>K</i>-Theory.</b><br/>
+            <span class="journal">to appear in <i>Mem. Amer. Math. Soc.</i>, v + 246 pages<br/></span>
+            <a href="https://arxiv.org/abs/2012.12676">arXiv:2012.12676</a>
+        </p></li>
+
+        <li><p>
+            <b> On the Global Homotopy Theory of Symmetric Monoidal Categories.</b><br/>
+            <span class="journal"><i>New York J. Math.</i> <b>29</b> (2023), pp. 635&ndash;686</span><br/>
+            <a href="https://nyjm.albany.edu/j/2023/29-26.html">journal link (open access)</a>&emsp;
+            <a href="https://arxiv.org/abs/2009.07004">arXiv version (arXiv:2009.07004)</a>
+        </p></li>
+
+        <li><p>
+            <b> Parsummable Categories as a Strictification of Symmetric Monoidal Categories.</b><br/>
+            <span class="journal"><i>Theory Appl. Categ.</i> <b>37</b> No. 17 (2021), pp. 482&ndash;529<br/></span>
+            <a href="http://www.tac.mta.ca/tac/volumes/37/17/37-17abs.html">journal link (open access)</a>&emsp;
+            <a href="https://arxiv.org/abs/2006.15068">arXiv version (arXiv:2006.15068)</a>
+        </p></li>
+
+        <li><p>
+            <b> Homotopy (Pre)Derivators of Cofibration Categories and Quasicategories.</b><br/>
+            <span class="journal"><i> Algebr. Geom. Topol. </i><b>18</b> No. 6 (2018), pp. 3601&ndash;3646<br/></span>
+            <a href="https://dx.doi.org/10.2140/agt.2018.18.3601">journal link (<span class="sc">doi</span>:10.2140/agt.2018.18.3601) </a>&emsp;<a href="https://arxiv.org/abs/1712.07845">arXiv version (arXiv:1712.07845)</a>
+        </p></li>
+    </ol>
+
+    <h2 id="teaching"> Teaching </h2>
+    <h3> University of Utrecht</h3>
+    <h4> Fall 2023</h4>
+    <p style="margin-bottom:24px"> I&rsquo;ll be teaching <span class="dutch" lang="nl">Bewijzen in de wiskunde</span> (Proofs in Mathematics). </p>
+    <h3> University of Bonn </h3>
+    <h4>Summer 2022</h4>
+    <ul>
+    <li><p>
+        Lecture course <a href="https://www.math.uni-bonn.de/people/lenz/homcor">Selected Topics in Topology: Homotopy Coherent Algebraic Structures</a>
+    </li></p>
+    <li><p>
+        Hauptseminar <a href="https://www.math.uni-bonn.de/people/schwede/seminar-k-theorie.pdf">Topologische Anwendungen algebraischer <i>K</i>-Theorie</a> (Applications of Algebraic <i>K</i>-Theory in Topology)<br/> with <a href="https://www.math.uni-bonn.de/people/schwede">Stefan Schwede</a>
+    </li></p>
+    </ul>
+
+    <h4>Winter 2021/22</h4>
+    <ul>
+    <li><p>
+        <del> Together with Stefan Schwede I offer two topics for bachelor theses in the upcoming summer term.
+        You can find more information about them in <a href="https://uni-bonn.sciebo.de/s/moz3vjsy78ADD8r">these slides</a>.</del>
+        Both of these topics have been taken now.
+    </li></p>
+    <li><p>
+        Graduate Seminar <a href="https://www.math.uni-bonn.de/people/schwede/Seminar-LieGroups-WS2122.pdf">Lie Groups and Their Representations</a><br/> joint with Stefan Schwede
+    </li></p>
+    <li><p>
+        Assistant for the lecture <a href="https://www.math.uni-bonn.de/people/daniel/2021/topo1/">Topology I</a><br/>
+        taught by <a href="https://www.math.uni-bonn.de/people/daniel/">Daniel Kasprowski</a>
+    </li></p>
+    </ul>
     </div>
-</div>
-
-<p>I&rsquo;m a postdoc (<i>onderzoeker</i>) in the <a href="https://utrechtgeometrycentre.nl/our-algebraic-topology-group/">algebraic topology group</a>
-at the University of Utrecht, where my mentor is <a href="https://www.uu.nl/staff/IMoerdijk">Ieke Moerdijk</a>. Before that I was a postdoc
-at the University of Bonn for one year, where I also obtained my PhD  under the supervision of
-<a href="https://www.math.uni-bonn.de/people/schwede">Stefan Schwede</a> in 2021.
-</p>
-<p>
-My research concerns equivariant and global homotopy theory, with a particular
-focus on equivariant infinite loop space theory and surrounding topics like
-(global) equivariant algebraic <i>K</i>-theory and parameterized semiadditivity.
-You can find an overview about some of the work I did before 2021 in
-<a href="https://sites.google.com/view/jmra/videos/topologygeometry#h.mzf0x3rdij8m">this video</a>
-I contributed to the <a href="https://sites.google.com/view/jmra/home"> Junior Mathematician Research Archive</a>.
-</p>
-
-<h2 id="publications"> Publications and preprints </h2>
-<ol reversed="reversed">
-    <li><p>
-        <b> Global Model Categories and Topological Andr&eacute;-Quillen Cohomology.</b><br/>
-        joint with <a class="sc" href="https://www.math.uni-bonn.de/people/stahlhau">Michael Stahlhauer</a><br/>
-        <span class="journal">preprint, 71 pages</span><br/>
-        <a href="https://arxiv.org/abs/2302.06207">arXiv:2302.06207</a>
-    </p></li>
-    <li><p>
-        <b>Parameterized Stability and the Universal Property of Global Spectra.</b><br/>
-        joint with <a class="sc" href="https://sites.google.com/view/bastiaan-cnossen">Bastiaan Cnossen</a> &amp; <a class="sc" href="https://www.math.uni-bonn.de/people/linskens/webpage.htmpl">Sil Linskens</a><br/>
-        <span class="journal">preprint, 103 pages</span><br/>
-        <a href="https://arxiv.org/abs/2301.08240">arXiv:2301.08240</a>
-    </p></li>
-
-    <li><p>
-        <b>Genuine vs. Na&iuml;ve Symmetric Monoidal <i>G</i>-Categories.</b><br/>
-        <span class="journal">preprint, 56 pages</span><br/>
-        <a href="https://arxiv.org/abs/2203.02277">arXiv:2203.02277</a>
-    </p></li>
-
-    <li><p>
-        <b>Global Algebraic <i>K</i>-Theory is Swan <i>K</i>-Theory.</b><br/>
-        <span class="journal">preprint, 53 pages</span><br/>
-        <a href="https://arxiv.org/abs/2202.07272">arXiv:2202.07272</a>
-    </p></li>
-
-    <li><p>
-        <b> Categorical Models of Unstable <i>G</i>-Global Homotopy Theory.</b><br/>
-        <span class="journal">preprint, 27 pages</span><br/>
-        <a href="https://arxiv.org/abs/2109.02067">arXiv:2109.02067</a>
-    </p></li>
-
-    <li><p>
-        <b> <i>G</i>-Global Homotopy Theory and Algebraic <i>K</i>-Theory.</b><br/>
-        <span class="journal">to appear in <i>Mem. Amer. Math. Soc.</i>, v + 246 pages<br/></span>
-        <a href="https://arxiv.org/abs/2012.12676">arXiv:2012.12676</a>
-    </p></li>
-
-    <li><p>
-        <b> On the Global Homotopy Theory of Symmetric Monoidal Categories.</b><br/>
-        <span class="journal"><i>New York J. Math.</i> <b>29</b> (2023), pp. 635&ndash;686</span><br/>
-        <a href="https://nyjm.albany.edu/j/2023/29-26.html">journal link (open access)</a>&emsp;
-        <a href="https://arxiv.org/abs/2009.07004">arXiv version (arXiv:2009.07004)</a>
-    </p></li>
-
-    <li><p>
-        <b> Parsummable Categories as a Strictification of Symmetric Monoidal Categories.</b><br/>
-        <span class="journal"><i>Theory Appl. Categ.</i> <b>37</b> No. 17 (2021), pp. 482&ndash;529<br/></span>
-        <a href="http://www.tac.mta.ca/tac/volumes/37/17/37-17abs.html">journal link (open access)</a>&emsp;
-        <a href="https://arxiv.org/abs/2006.15068">arXiv version (arXiv:2006.15068)</a>
-    </p></li>
-
-    <li><p>
-        <b> Homotopy (Pre)Derivators of Cofibration Categories and Quasicategories.</b><br/>
-        <span class="journal"><i> Algebr. Geom. Topol. </i><b>18</b> No. 6 (2018), pp. 3601&ndash;3646<br/></span>
-        <a href="https://dx.doi.org/10.2140/agt.2018.18.3601">journal link (DOI:10.2140/agt.2018.18.3601) </a>&emsp;<a href="https://arxiv.org/abs/1712.07845">arXiv version (arXiv:1712.07845)</a>
-    </p></li>
-</ol>
-
-<h2 id="teaching"> Teaching </h2>
-<h3> University of Utrecht</h3>
-<h4> Fall 2023</h4>
-<p style="margin-bottom:24px"> I&rsquo;ll be teaching <span class="dutch" lang="nl">Bewijzen in de wiskunde</span> (Proofs in Mathematics). </p>
-<h3> University of Bonn </h3>
-<h4>Summer 2022</h4>
-<ul>
-  <li><p>
-      Lecture course <a href="https://www.math.uni-bonn.de/people/lenz/homcor">Selected Topics in Topology: Homotopy Coherent Algebraic Structures</a>
-  </li></p>
-<li><p>
-    Hauptseminar <a href="https://www.math.uni-bonn.de/people/schwede/seminar-k-theorie.pdf">Topologische Anwendungen algebraischer <i>K</i>-Theorie</a><br/> with <a href="https://www.math.uni-bonn.de/people/schwede">Stefan Schwede</a>
-</li></p>
-</ul>
-
-<h4>Winter 2021/22</h4>
-<ul>
-<li><p>
-    <del> Together with Stefan Schwede I offer two topics for bachelor theses in the upcoming summer term.
-    You can find more information about them in <a href="https://uni-bonn.sciebo.de/s/moz3vjsy78ADD8r">these slides</a>.</del>
-    Both of these topics have been taken now.
-</li></p>
-<li><p>
-    Graduate Seminar <a href="https://www.math.uni-bonn.de/people/schwede/Seminar-LieGroups-WS2122.pdf">Lie Groups and Their Representations</a><br/> joint with Stefan Schwede
-</li></p>
-<li><p>
-    Assistant for the lecture <a href="https://www.math.uni-bonn.de/people/daniel/2021/topo1/">Topology I</a><br/>
-    taught by <a href="https://www.math.uni-bonn.de/people/daniel/">Daniel Kasprowski</a>
-</li></p>
-</ul>
-</div>
 </body>
 </html>
