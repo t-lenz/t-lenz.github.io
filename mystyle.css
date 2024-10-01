@@ -32,6 +32,7 @@ html {
 
 body {
     font-family: "Fira Sans", sans-serif;
+    color:hsl(208, 6%, 10%);
     max-width:1200px;
     margin:0px auto 0px auto;
     background-color:white;
@@ -52,7 +53,7 @@ div.body {
 }
 
 table.addr {
-    padding-top:5px;
+    padding-top:2.5px;
     font-variant-numeric: proportional-nums lining-nums !important;
 }
 
@@ -64,7 +65,7 @@ th {
 
 td, th {
     line-height:1.5 !important;
-    padding-top:5px;
+    padding-top:2.5px;
 }
 
 address {
@@ -77,7 +78,7 @@ h1 {
 }
 
 h1, h2, h3, h4 {
-    color:hsl(347, 85%, 33%);
+    color:hsl(208, 69%, 30%);
     font-weight:600;
 }
 
@@ -107,11 +108,11 @@ h4+ul {
 
 a {
     text-decoration: none;
-    color:hsl(347, 85%, 32%);
+    color:hsl(208, 69%, 30%);
 }
 
 a:hover {
-    color:hsl(347, 95%, 42%);
+    color:hsl(208, 45%, 42%);
 }
 
 .sc {
@@ -125,15 +126,15 @@ b {
 .cell {
     display:table-cell;
     padding:15px;
-    background-color:hsl(347, 85%, 32%);
+    background-color:hsl(208, 69%, 30%);
     font-weight:600;
     text-align:center;
-    color:white;
+    color:hsl(208, 39%, 98%);
     margin:0px;
 }
 
 .cell:hover {
-    background-color:hsl(347, 80%, 36%);
+    background-color:hsl(208, 50%, 40%);
     color:white;
     cursor:pointer;
 }
@@ -143,7 +144,7 @@ b {
     display:table;
     width:100%;
     table-layout:fixed;
-    background-color:hsl(347, 80%, 36%);
+    background-color:hsl(208, 80%, 36%);
 }
 
 @media screen and (min-width: 1000px) {
@@ -167,7 +168,7 @@ th {
 
 div.pic {
     width: 3555px;
-    flex-shrink: 1.35;
+    flex-shrink: 1.25;
     margin-left: 20px;
     min-width: 350px;
     margin-top: 21.44px;

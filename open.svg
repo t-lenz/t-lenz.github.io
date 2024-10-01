@@ -5,7 +5,7 @@
    version="1.1"
    id="svg2"
    sodipodi:docname="open.svg"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -61,18 +61,18 @@
   <path
      d="m 111.387,308.135 v -35.727 a 209.21,209.214 0 0 1 418.42,0 v 258.426"
      id="path1"
-     style="fill:none;stroke:#970c2a;stroke-width:104.764;stroke-opacity:1" />
+     style="fill:none;stroke:#19558a;stroke-width:104.764;stroke-opacity:1" />
   <circle
      cx="320.004"
      cy="680.729"
      r="256.08301"
      id="circle1"
-     style="fill:none;stroke:#970c2a;stroke-width:104.764;stroke-opacity:1" />
+     style="fill:none;stroke:#19558a;stroke-width:104.764;stroke-opacity:1" />
   <circle
      fill="#f68212"
      cx="321.01"
      cy="681.659"
      r="86.4287"
      id="circle2"
-     style="fill:#970c2a;fill-opacity:1" />
+     style="fill:#19558a;fill-opacity:1" />
 </svg>
