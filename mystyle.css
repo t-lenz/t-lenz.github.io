@@ -46,6 +46,11 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+span.closed {
+    display: inline-block;
+    width:0.8em;
+}
+
 span.lining {
     font-variant-numeric: lining-nums proportional-nums;
 }
